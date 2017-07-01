@@ -33,7 +33,7 @@
 
       (function poll() {
         fetchReposPRs(getRepos);
-        setTimeout(poll, 65000);
+        setTimeout(poll, 15000);
       }());
     },
   };
