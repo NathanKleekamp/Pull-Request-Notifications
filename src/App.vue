@@ -68,6 +68,11 @@
     margin-bottom: 1em;
   }
 
+  .masthead h1 {
+    font-size: 24px;
+    line-height: 1.45em;
+  }
+
   form {
     display: flex;
     flex-wrap: wrap;
