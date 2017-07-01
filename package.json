@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "dev-express": "node dist/server/index.js",
     "start": "node dist/server/index.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src"

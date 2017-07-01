@@ -27,14 +27,17 @@
         'fetchReposPRs',
       ]),
     },
-    updated() {
-      const fetchReposPRs = this.fetchReposPRs;
-      const getRepos = this.getRepos;
+    timeout: 0,
+    mounted() {
+      const poll = () => {
+        this.fetchReposPRs(this.getRepos);
+        this.timeout = setTimeout(poll, 15000);
+      };
 
-      (function poll() {
-        fetchReposPRs(getRepos);
-        setTimeout(poll, 15000);
-      }());
+      (poll());
+    },
+    beforeDestroy() {
+      clearTimeout(this.timeout);
     },
   };
 </script>
