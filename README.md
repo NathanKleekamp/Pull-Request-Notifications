@@ -2,14 +2,23 @@
 
 > Get notified when a PR has been assigned to you
 
+You need to create a `constants.js` file in `/app/dist/server/` and add your Github Personal Access Token:
+
+```js
+module.exports = {
+  GITHUB_TOKEN: ''
+};
+```
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:5000
 npm run dev
+npm run start # api proxy
 
 # build for production with minification
 npm run build

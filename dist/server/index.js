@@ -8,9 +8,8 @@ const compression = require('compression');
 const app = express();
 const port = 8080;
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(cors())
-}
+// Since this is local, allow everything. Change if hosting publically.
+app.use(cors());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
