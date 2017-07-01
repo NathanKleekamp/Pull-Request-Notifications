@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="component-wrapper">
+  <div id="pull-requests" class="component-wrapper">
     <pull-request v-for="pr in getPRs" :title="pr.title" :link="pr.url" :branch="pr.branch" :description="pr.body" :key="pr.id" />
   </div>
 </template>

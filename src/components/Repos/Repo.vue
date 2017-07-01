@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5em 1em;
+    margin-bottom: 1em;
   }
 
   h3 {

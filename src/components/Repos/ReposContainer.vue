@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="component-wrapper">
+  <div id="repositories" class="component-wrapper">
     <h2>Monitored Repos</h2>
     <repo v-for="repo in getRepos" :name="repo.repo" :owner="repo.owner" :key="repo.id"></repo>
     <add-repo />
@@ -32,9 +32,8 @@
       const getRepos = this.getRepos;
 
       (function poll() {
-        console.log('poll');
         fetchReposPRs(getRepos);
-        setTimeout(poll, 60000);
+        setTimeout(poll, 65000);
       }());
     },
   };

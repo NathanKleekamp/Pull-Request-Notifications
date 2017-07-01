@@ -60,39 +60,4 @@
     padding-top: 1em;
     margin-top: 2em;
   }
-
-  .add-repo-form {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  label {
-    display: block;
-  }
-
-  input {
-    margin-right: 1em;
-  }
-
-  button {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: 0;
-  }
-
-  .add-repo-form button {
-    flex-shrink: 0;
-    margin-top: 1em;
-  }
-
-  .button {
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 4px;
-    color: rgba(255, 255, 255, 1);
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 1em 1em 0;
-    padding: 0.5em 1em;
-  }
 </style>

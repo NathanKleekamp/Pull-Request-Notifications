@@ -1,30 +1,37 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { setPRs, setRepo, deleteRepo } from './mutations';
-import { getPRs, getRepos } from './getters';
+import { setPRs, setRepo, deleteRepo, setUser, dropState } from './mutations';
+import { getPRs, getRepos, getUser } from './getters';
 import * as actions from './actions';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
+    username: '',
     repos: [],
     pull_requests: [],
   },
   getters: {
     getPRs,
+    getUser,
     getRepos,
   },
   mutations: {
     setPRs,
     setRepo,
+    setUser,
+    dropState,
     deleteRepo,
   },
   actions: {
-    fetchReposPRs: actions.fetchReposPRs,
     setRepo: actions.setRepo,
-    setReposOnMount: actions.setReposOnMount,
+    setUser: actions.setUser,
     onDeleteRepo: actions.onDeleteRepo,
+    fetchReposPRs: actions.fetchReposPRs,
+    setReposOnMount: actions.setReposOnMount,
+    setUserOnMount: actions.setUserOnMount,
+    deleteData: actions.deleteData,
   },
 });
 
