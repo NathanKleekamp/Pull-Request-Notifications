@@ -1,6 +1,6 @@
 # pull-request-notifications
 
-> Get notified when a PR has been assigned to you
+> Get notified when you're requested to review a pull request
 
 You need to create a `constants.js` file in `/dist/server/` and add a [Github Personal Access Token](https://git.io/vS2mQ):
 
