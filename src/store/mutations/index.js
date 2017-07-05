@@ -20,7 +20,7 @@ export const deleteRepo = (state, repo) => {
 
 export const setPRs = (state, PRs) => {
   const current = state;
-  current.pull_requests = state.pull_requests.concat(PRs);
+  current.pull_requests = PRs;
 };
 
 export const setUser = (state, user) => {

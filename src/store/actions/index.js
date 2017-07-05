@@ -9,7 +9,9 @@ const pullRequestsFilter = (pullRequest) => {
   const username = getFromLocalStorage('username');
 
   if (pullRequest.requested_reviewers.length) {
-    const index = pullRequest.requested_reviewers.map(reviewer => reviewer.login).indexOf(username);
+    const index = pullRequest.requested_reviewers.map(reviewer => (
+      reviewer.login.toLowerCase().indexOf(username)
+    ));
 
     if (index !== -1) {
       return true;
