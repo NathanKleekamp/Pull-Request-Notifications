@@ -20,7 +20,18 @@ export const deleteRepo = (state, repo) => {
 
 export const setPRs = (state, PRs) => {
   const current = state;
-  current.pull_requests = PRs;
+  const result = PRs.filter((request) => {
+    if (current.pull_requests.length) {
+      const index = current.pull_requests.map(pr => pr.index).indexOf(request.id);
+      if (index !== -1) {
+        return true;
+      }
+    }
+
+    return true;
+  });
+
+  current.pull_requests = result;
 };
 
 export const setUser = (state, user) => {

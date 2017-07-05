@@ -1,7 +1,6 @@
 <template lang="html">
   <div class="component-wrapper">
-    <div v-on:mouseenter="onShowCloseButton" v-on:mouseleave="onHideCloseButton" class="wrapper collapsed">
-      <div class="close-button-wrapper"><i v-on:click="onDeleteNotification" class="fa fa-times-circle close" aria-hidden="true"></i></div>
+    <div class="wrapper collapsed">
       <article>
         <header>
           <h3 class="title"><a :href="link" target="_blank">{{ title }}</a></h3>
@@ -24,23 +23,7 @@
         const isCollapsed = wrapper.classList.contains('collapsed');
         wrapper.classList.toggle('collapsed', !isCollapsed);
       },
-      onShowCloseButton(event) {
-        const close = event.target.querySelector('.close');
-        this.timeout = setTimeout(() => {
-          close.style.display = 'block';
-        }, 500);
-      },
-      onHideCloseButton(event) {
-        const close = event.target.querySelector('.close');
-        close.style.display = 'none';
-        clearTimeout(this.timeout);
-      },
-      onDeleteNotification(event) {
-        // Placeholder
-        console.log('event', event);
-      },
     },
-    timeout: 0,
   };
 </script>
 
@@ -62,10 +45,6 @@
 
   .sub-heading {
     font-size: 0.85em;
-  }
-
-  .close-button-wrapper {
-    overflow: hidden;
   }
 
   .close {
