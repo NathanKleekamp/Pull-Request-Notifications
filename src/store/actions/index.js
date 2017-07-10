@@ -10,8 +10,8 @@ const pullRequestsFilter = (pullRequest) => {
 
   if (pullRequest.requested_reviewers.length) {
     const index = pullRequest.requested_reviewers.map(reviewer => (
-      reviewer.login.toLowerCase().indexOf(username)
-    ));
+      reviewer.login.toLowerCase()
+    )).indexOf(username);
 
     if (index !== -1) {
       return true;
