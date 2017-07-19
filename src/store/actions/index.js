@@ -23,7 +23,7 @@ const pullRequestsFilter = (pullRequest) => {
 
 const getPRObjects = pullRequests => pullRequests.filter(pullRequestsFilter)
   .map(pullRequest => ({
-    url: pullRequest.url,
+    url: pullRequest.html_url,
     id: pullRequest.id,
     body: pullRequest.body,
     title: pullRequest.title,
